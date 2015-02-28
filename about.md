@@ -13,6 +13,6 @@ I'm a web developer and designer living in Philadelphia, Pennsylvania. Currently
 A place to include any other types of information that you'd like to include about yourself. 
 
 ### Socialize With Me
-[github](http://www.github.com/brh55)
-[twitter](http://www.twitter.com/himbrandon)
-[email@domain.com](mailto:brandonhim@live.com)
+- [github](http://www.github.com/brh55)
+- [twitter](http://www.twitter.com/himbrandon)
+- [email@domain.com](mailto:brandonhim@live.com)
