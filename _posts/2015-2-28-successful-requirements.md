@@ -5,6 +5,7 @@ title: Writing Successful Requirements
 In many ways gathering and writing requirements are like a *successful* first date. That may seem odd to make such a comparison between two completely opposite things...believe me, I think so as well. But if you really think about the core and the outcome both things, you'll realize that they both require a good amount of attention in order to follow through to the success of the development process.
 
 But enough about weird similes, let’s get technical. 
+
 So what makes a good requirements? Well to provide a deeper understanding about what comprises of good requirements, this blog will look into thoughts of three professionals (Jim Heumann, Thomas Hathaway, and Karl Wiegers) within the technology industry and some shared beliefs in **GOOD** requirements. And of course, I’ll share some insights based off of my *limited* experience with requirement gathering with my own client’s and professional experience, where poor requirements have lead me astray.
 
 ## As Clear as Water
@@ -22,7 +23,7 @@ Thus, Weiger suggest that assigning a implementation priority to a feature, requ
 After a hit to my confidence, and a disappointed client, I learned that projects will need iterations before you can actually complete everything. Thus, build and write out the essential functions to be able to perform the main function of the project before being distracted by attractive features.
 
 ## Breaking it all out
-When writing requirement statements, you’ll be bounded by bulky initial statements. However, focus on splitting large requirement into multiple requirements, this will provide test cases and make it easier during the development process (Wieger 1998). Similarly, think of it like the process tasking out stories in a SCRUM development cycle. What is more appealing being tossed a huge 2000 page book and to having all the associated test in the last week of the term, or to be provided with a test per each few chapters? Breaking it down helps. It prevents introducing new dependencies and branches that would of not occurred originally (Neumann 2004). 
+When writing requirement statements, you’ll be bounded by bulky initial statements. However, focus on splitting large requirement into multiple requirements, this will provide test cases and make it easier during the development process (Wieger 1998). Similarly, think of it like the process tasking out stories in a SCRUM development cycle. What is more appealing being tossed a huge 2000 page book and then having all the associated test in the last week of the term, or to be provided with a test per each few chapters? Breaking it down helps. It prevents introducing new dependencies and branches that would of not occurred originally (Neumann 2004). 
 
 ### Wrapping it up
 I just touch the surface on some areas of good requirements. But Ideally my goal was to focus on areas that can improve requirements writing exponentially. If you are interested in reading more about particular guidelines, I would suggest looking at the references below of the authors associated articles. Even if you are a seasoned veteran in writing requirements, sometimes a refresher is what you need. Like a date, being clear and unambiguous the first time around, can save you from a world of pain and agony.
