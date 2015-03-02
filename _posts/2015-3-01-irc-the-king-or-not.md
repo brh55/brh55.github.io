@@ -18,11 +18,13 @@ With my virtual notepad in hand, I seeked out this a mini quest, to derive a fai
 Upon a few minutes of joining the ubuntu channel. My ChatZilla web-based client soon became unreadable, I viciously tried to gather my concentration. Attempting to trace and follow the questions being asked,
 
 >  I felt as if I was staring at mosh pit of concatenated strings. Mainly because I was.
+
 ![ChatZilla](/images/chatzilla.png)
 
 I couldn’t give up, not quite yet. The problem wasn’t IRC, but it was with ChatZilla method of organizing the information. 
 
 Thus, I made the switch over to a more *user-friendly* client, Kiwiirc. It was clean, organized, and appealing. And I needed that.
+
 ![Kiwiirc](/images/kiwi.png)
 
 ### Question 1
