@@ -18,7 +18,7 @@ html {
 }
 
 body {
-	background: #F2F2F2;
+	background: $white;
   font: 18px/1.4 $helvetica;
   font-family: 'Lato', sans-serif;
   color: $darkGray;
@@ -32,8 +32,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
-  color: $darkerGray;
+  font-family: 'Lato', $helvetica, sans-serif;
+  color: #B2711B;
   font-weight: bold;
 
   line-height: 1.7;
