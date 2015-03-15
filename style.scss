@@ -47,6 +47,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 30px;
+  line-height: 1.2;
   a {
     color: inherit;
   }
@@ -77,6 +78,7 @@ a {
 	cursor: pointer;
   &:hover, &:active {
     color: $blue;
+    transition: all .4s ease;
   }
 }
 
@@ -234,7 +236,12 @@ nav {
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
-
+    font-size: 16px;
+    font-family: 'Lato', $helvetica, sans-serif;
+    padding: 9px;
+    border-bottom: 1px solid rgba(255,255,255,.6)
+    transition: .4s all ease-in;
+      
     @include mobile {
       margin: 0 10px;
       color: $blue;
@@ -259,11 +266,13 @@ nav {
 .post {
   blockquote {
     margin: 1.8em .8em;
-    border-left: 2px solid $gray;
+    border-left: 2px solid #35A0ED;
     padding: 0.1em 1em;
     color: $gray;
     font-size: 22px;
     font-style: italic;
+    font-weight: 700;
+    font-family: 'Lato', sans-serif;
   }
 
   .comments {
