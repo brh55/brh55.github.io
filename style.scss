@@ -156,7 +156,7 @@ img {
 //
 
 .wrapper-masthead {
-  margin-bottom: 50px;
+  margin-bottom: 27px;
   background: rgb(6, 65, 102);
 }
 
@@ -304,6 +304,9 @@ footer {
 .breadcrumb {
   list-style-type: none;
   padding-left: 0;
+  margin-top: 0px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(190,190, 190, .6);
   
   li {
     display: inline;
@@ -312,6 +315,12 @@ footer {
 
 .divider {
   margin: 0 10px;
+}
+
+hr.half {
+  width: 80%;
+  margin: 20px 0;
+  border-color: rgba(228, 228, 228, 0.4);
 }
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
