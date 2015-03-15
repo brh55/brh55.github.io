@@ -3,6 +3,7 @@ layout: post
 title: Stepping Out of Your Own Comfort Zone
 ---
 **What next?**
+
 That is the one of the best questions to ask yourself. Something Mitch Rothschild, the CEO of Vitals, alludes to in his recent interview with the New York Times. According to Rothschild, being curious is something you should carry out with you for the rest of your life (2015). Because for him it’s all about stepping out of his comfort zone is the best thing you do to progress yourself. Therefore, doing something new every 90 days is what Rothschild does to keep himself “fresh” (2015). However, how can this translate to the working or professional world. 
 
 Well what I took away from it was that, the more you are comfortable being uncomfortable (quite a paradox right?), the better you are able to adapt and actually make more impactful decisions towards the world. And for myself, this is an important concept. Similarly, to Rothschild, I’m very inclined to pursue interesting business ventures, or random challenges just to help understand myself and also question what I’m really passionate about. 

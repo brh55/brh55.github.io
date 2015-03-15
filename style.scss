@@ -18,8 +18,9 @@ html {
 }
 
 body {
-	background: $white;
+	background: #F2F2F2;
   font: 18px/1.4 $helvetica;
+  font-family: 'Lato', sans-serif;
   color: $darkGray;
 }
 
@@ -66,6 +67,8 @@ h4 {
 
 p {
   margin: 15px 0;
+  color: rgb(95, 95, 95);
+  font-size: 15px;
 }
 
 a {
@@ -156,7 +159,8 @@ img {
 
 .masthead {
   padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 1px solid #08283A;
+  background-color: rgb(6, 65, 102);
 
   @include mobile {
     text-align: center;
@@ -192,7 +196,7 @@ img {
 
 .site-name {
   margin: 0;
-  color: $darkGray;
+  color: #FAFAFA;
   cursor: pointer;
   font-family: $helveticaNeue;
   font-weight: 300;
@@ -202,7 +206,7 @@ img {
 
 .site-description {
   margin: -5px 0 0 0;
-  color: $gray;
+  color: $white;
   font-size: 16px;
 
   @include mobile {
@@ -225,7 +229,7 @@ nav {
 
   a {
     margin-left: 20px;
-    color: $darkGray;
+    color: $white;
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
