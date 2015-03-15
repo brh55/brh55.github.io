@@ -239,7 +239,7 @@ nav {
     font-size: 16px;
     font-family: 'Lato', $helvetica, sans-serif;
     padding: 9px;
-    border-bottom: 1px solid rgba(255,255,255,.6)
+    border-bottom: 1px solid rgba(255,255,255,.6);
     transition: .4s all ease-in;
       
     @include mobile {
