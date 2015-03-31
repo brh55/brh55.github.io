@@ -6,6 +6,9 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
 
     <meta name="author" content="{{ site.name }}" />
     <meta name="description" content="{{ site.description }}">
@@ -13,14 +16,14 @@
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <!-- Font Stylesheet -->
+    <!-- Vendor Stylesheet -->
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700,300italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
-
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+    
+    <!-- Personal Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    
   </head>
 
   <body>
