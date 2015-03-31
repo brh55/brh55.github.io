@@ -1,6 +1,7 @@
 ---
 layout: post
 title: A Look at Your Next FOSS Project, or Maybe.
+comments: true
 ---
 In today’s world, anyone who may be interested in making a difference in the world or has the urge to partake in something larger than themselves should look no further than FOSS (Free Open Source Softwares). The idea of Software might be a deterring factor for some, however, it doesn’t necessarily mean you have to be the stereotypical programmer to contribute. Any FOSS project will be more than willing to take the extra hands with documentation, marketing, etc. Sounds great right?
 

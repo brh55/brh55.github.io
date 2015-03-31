@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Stepping Out of Your Own Comfort Zone
+comments: true
 ---
 **What next?**
 

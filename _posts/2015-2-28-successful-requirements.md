@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Writing Successful Requirements
+comments: true
 ---
 In many ways gathering and writing requirements are like a *successful* first date. That may seem odd to make such a comparison between two completely opposite things...believe me, I think so as well. But if you really think about the core and the outcome both things, you'll realize that they both require a good amount of attention in order to follow through to the success of the development process.
 
