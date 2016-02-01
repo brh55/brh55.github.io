@@ -1,73 +1,61 @@
-#
-# This file contains configuration flags to customize your site
-#
+# Dependencies
+markdown:	kramdown
+# Permalinks
+permalink:	/blog/:title
 
-# Name of your site (displayed in the header)
-name: Brandon Him
+# Setup
+title:            Brandon Him | Web Developer and Designer
+tagline:          'blog'
+description:      'A self-taught web developer and designer talking about all great things related to front-end development, and golang.'
+url:              http://brandonhim.com
+baseurl:          
+commentsystem:    google
+disqus:           example
 
-# Short bio or description (displayed in the header)
-description: Web Developer & Designer in Philadelphia
+author:
+  name:           Brandon Him
+  url:            https://plus.google.com/u/0/+BrandonHim1
 
-# URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://avatars2.githubusercontent.com/u/6020066?v=3&s=96
+paginate:         5
 
-#
-# Flags below are optional
-#
+# Custom vars
+icon:             https://avatars3.githubusercontent.com/u/6020066?v=3&s=460
+cover:            /assets/images/cover.jpg
 
-# Includes an icon in the footer for each username you enter
-footer-links:
-  dribbble: 
-  email: brandonhim@live.com
-  facebook: 
-  flickr: 
-  github: brh55
-  instagram: aestheticsfetish
-  linkedin: 
-  pinterest: 
-  rss: # just type anything here for a working RSS icon, make sure you set the "url" above!
-  twitter: jekyllrb
-  stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
+social:
+  - icon:         twitter
+    url:          https://twitter.com/himbrandon
+    desc:         Follow me on twitter
 
-# Your disqus shortname, entering this will enable commenting on posts
-disqus: 
+  - icon:         github
+    url:          https://github.com/brh55
+    desc:         Fork me on github
 
-# Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics: 
+  - icon:         googleplus-alt
+    url:          https://plus.google.com/u/0/+BrandonHim1
+    desc:         Add me on google+
 
-# Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
-# Used for Sitemap.xml and your RSS feed
-url: 
+  - icon:         linkedin
+    url:          https://www.linkedin.com/in/brandon-him-5a194b90
+    desc:         Connect with me
 
-# If you're hosting your site at a Project repository on GitHub pages 
-# (http://yourusername.github.io/repository-name)
-# and NOT your User repository (http://yourusername.github.io)
-# then add in the baseurl here, like this: "/repository-name"
-baseurl: ""
+menu:
+  - title:        Home
+    url:          /
 
-#
-# !! You don't need to change any of the configuration flags below !!
-#
+  - title:        About
+    url:          /about
 
-markdown: redcarpet
-highlighter: pygments
-permalink: /:title/
+copyright:
+  author:         Brandon Him
+  url:            http://brandonhim.com
+  type_title:     Some rights reserved
+  type_url:       http://creativecommons.org/licenses/by-nc/2.5
 
-# The release of Jekyll Now that you're using
-version: v1.0.0
+parallax:         true
 
-# Set the Sass partials directory, as we're using @imports
-sass:
-  sass_dir: _scss
-  style: :expanded # You might prefer to minify using :compressed
+# Google Analytics (add the UA Code, e.g.: UA-xxxxxxxx-1)
+google_analytics:  
 
-# Use the following plug-ins
-gems:
-  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
-
-# Exclude these files from your production _site
-exclude:
-    - Gemfile
-    - Gemfile.lock
-    - LICENSE
-    - README.md
+# Default Theme Color for Chrome on Android Lollipop (Use RGB ColorCode without `#`, e.g.: `db5945`)
+theme_color:       7E9576
