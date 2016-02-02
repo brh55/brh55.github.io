@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<header class="clean" style="background-image: url({% if page.image.url %}{{ page.image.url }}{% else %}{{ site.cover }}{% endif %}); height: 350px; {% if site.parallax != true %}background-attachment: scroll;{% endif %}" data-stellar-background-ratio="0.5" data-stellar-horizontal-offset="50">
+    {% if page.video %}
+        <video id="bg-video" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+        {% for format in page.video %}
+            <source src="{% for url in format limit:1 offset:1 %}{{ url }}{% endfor %}" type="video/mp4">
+        {% endfor %}
+        </video>
+    {% endif %}
+    {% include top.html %}
+    <div id="post-info" style="bottom: 30%; text-align: center; line-height: 45px;" data-stellar-ratio="0.7">
+        <h1>{{ page.title }}</h1>
+        <h2>Things that keeps me busy.</h2>
+    </div>
+</header>
+<div id="middle">
+<div id="article">
+    {{ content }}
+</div>
+</div>
+<footer class="clean" style="background-image: url({{ page.image.url }}); background-position: bottom; bottom: 0; z-index: 4; position: absolute; height: 60px; {% if site.parallax != true %}background-attachment: scroll;{% endif %}" data-stellar-background-ratio="0.5" data-stellar-horizontal-offset="50" data-stellar-vertical-offset="50">
+    <p class="copyright">&copy;{{ site.time | date: "%Y" }}, <a href="{{ site.copyright.url }}" target="_blank">{{ site.copyright.author }}</a>. <a href="{{ site.copyright.type_url }}" target="_blank">{{ site.copyright.type_title }}</a>.</p>
+</footer>

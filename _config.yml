@@ -20,7 +20,7 @@ paginate:         5
 
 # Custom vars
 icon:             https://avatars3.githubusercontent.com/u/6020066?v=3&s=460
-cover:            /assets/images/cover.jpg
+cover:            /assets/images/space.jpg
 
 social:
   - icon:         twitter
@@ -45,6 +45,9 @@ menu:
 
   - title:        About
     url:          /about
+
+  - title:        Projects
+    url:          /projects
 
 copyright:
   author:         Brandon Him
