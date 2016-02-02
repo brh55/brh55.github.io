@@ -12,9 +12,9 @@ image:
 
 Hello there,
 
-I'm Brandon, a self-taught web developer and designer living in Philadelphia. Currently, I'm working as a Front-end Engineer at [Urban Outfitters](http://www.urbanoutfitters.com/urban/index.jsp), and studying Information Technology at [Drexel University](http://drexel.edu/). I'm an avid coder and spend weekends completing small projects or contributing to Open Source Projects. I enjoy being a mentor and advocate self-teaching.
+I'm Brandon, a self-taught web developer and designer living in Philadelphia. Currently, I'm working as a Front-end Engineer at [Urban Outfitters](http://www.urbanoutfitters.com/urban/index.jsp), and studying Information Technology at [Drexel University](http://drexel.edu/). I'm an avid coder and spend weekends completing small projects or contributing to open source projects. I enjoy being a mentor and advocate self-teaching.
 
-Open Source/Github projects I'v contributed to (donated, community involvement,documentation, code fixes, etc):
+Open Source/Github projects I've contributed to (donated, community involvement,documentation, code fixes, etc):
 
 - [MODx](https://modx.com/)
 
