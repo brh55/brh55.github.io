@@ -4,6 +4,10 @@ header, footer {
 	background-attachment: fixed;
 }
 
+body,
+#middle {
+	background: #F3F3F3;
+}
 #post-info {
 	width: 700px;
 	left: 50%;
@@ -71,4 +75,23 @@ header, footer {
 
 table {
 	width: 100%;
+}
+
+.project-wrapper {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.project-tile {
+	max-width: 28%;
+}
+
+.content-wrap {
+	padding: 25px;
+	background: #F9F9F9;
+}
+
+.content-wrap h4 {
+	margin-top: 10px
 }

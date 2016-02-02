@@ -542,3 +542,12 @@ pre code {
 	margin-top: 60px;
 	border-top: 1px solid #EEE;
 }
+
+.project-wrappper {
+	display: flex;
+	justify-content: space-between;
+}
+
+.project-tile {
+	max-width: 28%;
+}
