@@ -93,7 +93,7 @@ Well, fortunately I've created a re-usable helper function that can be used in y
  * @return {Object}           Returns an object containing our template and scope
  */
 
-compileTemplate(template) {
+function compileTemplate(template) {
     var compiledElement;
     var isolatedScope;
 
