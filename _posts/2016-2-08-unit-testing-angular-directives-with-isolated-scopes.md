@@ -3,17 +3,19 @@ layout: post
 title: Unit Testing Angular Directives with Isolated Scopes
 comments: true
 ---
-# Isolated Scopes
 If you've ever worked with Angular directives, then you're well aware of directives operating in an isolated scope. There could be several design reasons for directives having isolated scopes such as performance, modularization, etc.
 
 However, this may lead some test-driven developers into the following predicament. How do we unit test a isolated directive, when the scope is created during compilation?
 
 Simply put, *$compile*.
+
 For more information about the $compile service, please check out the [$compile documentation](https://docs.angularjs.org/api/ng/service/$compile).
 
 Essentially, our goal is to use the Angular's $compile service to compile our directive during each test, which would allow us to reference the compiled directive's scope.
 
 Let's see how this would be done step-by-step.
+
+### Start of Tutorial
 
 As in every Jasmine unit test, start off with a describe block, if you are unfamiliar with the Jasmine framework, please check out the [documentation](http://jasmine.github.io/). But as you would expect, a describe block is a container to describe a suite of test.
 
