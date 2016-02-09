@@ -4,22 +4,25 @@ title: Unit Testing Angular Directives with Isolated Scopes
 comments: true
 ---
 # Isolated Scopes
-If you've ever worked with Angular directives, then you're well aware of occassional directives operating in an isolated scope. There could be several reasons for this: performance, modularization, seperation, etc.
+If you've ever worked with Angular directives, then you're well aware of directives operating in an isolated scope. There could be several design reasons for directives having isolated scopes such as performance, modularization, etc.
 
-But how do we unit test this directive alone, when the scope gets created during compilation?
+However, this may lead some test-driven developers into the following predicament. How do we unit test a isolated directive, when the scope is created during compilation?
 
-*one word, $compile*
+Simply put, *$compile*.
+For more information about the $compile service, please check out the [$compile documentation](https://docs.angularjs.org/api/ng/service/$compile).
 
-The goal is to use the Angular $compile service to compile our directive and creating a reference to the compiled isolated scope. Let's see how this would be done step-by-step.
+Essentially, our goal is to use the Angular's $compile service to compile our directive during each test, which would allow us to reference the compiled directive's scope.
 
-1. Start it off with a describe block
+Let's see how this would be done step-by-step.
+
+As in every Jasmine unit test, start off with a describe block, if you are unfamiliar with the Jasmine framework, please check out the [documentation](http://jasmine.github.io/). But as you would expect, a describe block is a container to describe a suite of test.
 
 ```
 describe("Angular Controller", function() {
 });
 ```
 
-2. Set up our configuration and inject our $compile, and $scope service
+Next, we want to set up our typical Angular configuration and inject our $compile, and $rootScope services.
 
 ```
 describe("Angular Controller", function() {
@@ -39,7 +42,7 @@ describe("Angular Controller", function() {
 });
 ```
 
-3. Now we can compile our directive and start testing freely.
+After our configuration, we can compile our directive and start testing on the directive.
 
 ```
 describe("Angular Controller", function() {
@@ -49,8 +52,6 @@ describe("Angular Controller", function() {
 
     beforeEach(module('exampleApp'));
 
-    // If you've never worked with injector, underscore notation
-    // is commonly used, which will be unwrapped by the injector
     beforeEach(inject(function(_$compile_, _$rootScope_) {
         $compile = _$compile_;
         $rootScope = _$rootScope;
@@ -72,17 +73,14 @@ describe("Angular Controller", function() {
 
         $scope.$digest();
 
-
         expect(directiveScope.type).toBe("cheddar");
     });
 });
 ```
 
-Hopefully this example helps clear up some confusion.
+But wait, how can we apply *DRY* principles to our unit test? Especially if we will be repeatingly testing other directives?
 
-But what if your template code is significantly long?
-
-Well, create a helper function. Here is a re-usable helper function that can be used in your unit test.
+Well, fortunately I've created a re-usable helper function that can be used in your unit test or added to your utils library.
 
 ## Helper Function
 
@@ -111,9 +109,9 @@ compileTemplate(template) {
 }
 ```
 
-Now to utilize this, just call the method compileTemplate() with a variable storing your directive template.
+Simply just call the method, compileTemplate() with a variable storing your directive template.
 
-
+Example:
 ```
 ...
 var cheeseScope = compileTemplate(template);
@@ -121,3 +119,4 @@ expect(cheeseScope.cheddar).toBe(false);
 ...
 ```
 
+Well, I hope that clears up any road blocks you may have been experiencing in your unit tests. If you have any questions, or if there are any mistakes in my code, feel free to tweet @HimBrandon, or leave a comment. Cheers!
