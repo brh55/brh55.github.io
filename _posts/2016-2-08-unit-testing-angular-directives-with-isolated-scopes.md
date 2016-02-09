@@ -114,11 +114,13 @@ compileTemplate(template) {
 Simply just call the method, compileTemplate() with a variable storing your directive template.
 
 Example:
+
 ```
 ...
 var cheeseScope = compileTemplate(template);
 expect(cheeseScope.cheddar).toBe(false);
 ...
 ```
+
 
 Well, I hope that clears up any road blocks you may have been experiencing in your unit tests. If you have any questions, or if there are any mistakes in my code, feel free to tweet @HimBrandon, or leave a comment. Cheers!
