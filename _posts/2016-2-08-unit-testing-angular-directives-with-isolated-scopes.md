@@ -123,4 +123,4 @@ expect(cheeseScope.cheddar).toBe(false);
 ```
 
 
-Well, I hope that clears up any road blocks you may have been experiencing in your unit tests. If you have any questions, or if there are any mistakes in my code, feel free to tweet @HimBrandon, or leave a comment. Cheers!
+Well, I hope that clears up any road blocks you may have been experiencing in your unit tests. If you have any questions, or if there are any mistakes in my code, feel free to tweet [@HimBrandon](https://twitter.com/HimBrandon), or leave a comment. Cheers!
