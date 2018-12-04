@@ -1,64 +1,38 @@
-# Dependencies
-markdown:	kramdown
-# Permalinks
-permalink:	/blog/:title
+# Site
+name: "Brandon Him"
+description: "Developer, Open-sourcer, Passionate Dabbler"
+meta_description: "Silicon Valley based developer who is quirky and loves creating things"
+logo: 'assets/images/logo.png'
+favicon: 'assets/images/logo.png'
+google_analytics: 'UA-46278016-1'
 
-# Setup
-title:            Brandon Him | Web Developer and Designer
-tagline:          'blog'
-description:      'A self-taught web developer and designer talking about all great things related to front-end development, and golang.'
-url:              http://brandonhim.com
-baseurl:          
-commentsystem:    google
-disqus:           example
-
-author:
-  name:           Brandon Him
-  url:            https://plus.google.com/u/0/+BrandonHim1
-
-paginate:         5
-
-# Custom vars
-icon:             https://avatars3.githubusercontent.com/u/6020066?v=3&s=460
-cover:            /assets/images/space.jpg
-
-social:
-  - icon:         twitter
-    url:          https://twitter.com/himbrandon
-    desc:         Follow me on twitter
-
-  - icon:         github
-    url:          https://github.com/brh55
-    desc:         Fork me on github
-
-  - icon:         googleplus-alt
-    url:          https://plus.google.com/u/0/+BrandonHim1
-    desc:         Add me on google+
-
-  - icon:         linkedin
-    url:          https://www.linkedin.com/in/brandon-him-5a194b90
-    desc:         Connect with me
-
-menu:
-  - title:        Home
-    url:          /
-
-  - title:        About
-    url:          /about
-
-  - title:        Projects
-    url:          /projects
-
-copyright:
-  author:         Brandon Him
-  url:            http://brandonhim.com
-  type_title:     Some rights reserved
-  type_url:       http://creativecommons.org/licenses/by-nc/2.5
-
-parallax:         true
-
-# Google Analytics (add the UA Code, e.g.: UA-xxxxxxxx-1)
-google_analytics:  
-
-# Default Theme Color for Chrome on Android Lollipop (Use RGB ColorCode without `#`, e.g.: `db5945`)
-theme_color:       7E9576
+# Authors
+authors:
+  brandon:
+    name: Brandon
+    display_name: Him
+    gravatar: 49a4f5377b60e3fcc194ca4a9c7ffb00
+    email: brandonhim@live.com
+    web: https://brandonhim.com
+    twitter: https://twitter.com/himbrandon
+  
+# Plugins
+plugins: 
+  - jekyll-paginate
+  - jekyll-archives
+    
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: '/category/:name/'
+    
+# Pagination 
+paginate: 6
+paginate_path: /page:num/
+    
+# Other
+markdown: kramdown
+highlighter: rouge

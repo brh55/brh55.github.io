@@ -2,6 +2,7 @@
 layout: post
 title: Stepping Out of Your Own Comfort Zone
 comments: true
+tags: business, ceo, personal
 ---
 **What next?**
 

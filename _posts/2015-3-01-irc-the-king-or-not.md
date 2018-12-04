@@ -2,6 +2,7 @@
 layout: post
 title: IRC, the King of Communication for Professionals, or Tool to be Forgotten?
 comments: true
+tags: irc, communication
 ---
 
 Let’s face it. In today’s generation, you have options. More so, we are flooded with so many alternative technologies that the popular saying, “theres an app for that,” is not too far off from the truth. So it’s no surprise that the IRC (Internet Relay Chat), a classical application layer protocol known for it’s messaging capabilities, has been lost in the shuffle among the glorified variety of technologies and applications. Yet among many technical gurus, IRC will always and still be their ‘Go-To.’
