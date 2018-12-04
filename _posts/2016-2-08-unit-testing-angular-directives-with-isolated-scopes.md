@@ -3,6 +3,7 @@ layout: post
 title: Unit Testing Angular Directives with Isolated Scopes
 comments: true
 tags: development, web dev, angular 1
+featured: true
 ---
 If you've ever worked with Angular directives, then you're well aware of directives operating in an isolated scope. There could be several design reasons for directives having isolated scopes such as performance, modularization, etc.
 
