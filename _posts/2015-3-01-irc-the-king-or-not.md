@@ -3,6 +3,7 @@ layout: post
 title: IRC, the King of Communication for Professionals, or Tool to be Forgotten?
 comments: true
 author: brandon
+image: assets/images/typing.jpg
 categories: [irc, communication]
 ---
 

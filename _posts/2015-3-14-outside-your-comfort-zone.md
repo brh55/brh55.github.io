@@ -3,6 +3,7 @@ layout: post
 title: Stepping Out of Your Own Comfort Zone
 comments: true
 author: brandon
+image: assets/images/comfort.jpg
 categories: [business, ceo, personal]
 ---
 **What next?**

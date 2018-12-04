@@ -3,6 +3,7 @@ layout: post
 title: The Best Thing You Can Do for Your Team is Knowing Yourself
 comments: true
 author: brandon
+image: assets/images/self.jpg
 categories: [personal, leadership]
 ---
 In my recent reading of an interview on Paul Maritz, the CEO of the Red Hat. I’ve learned a few important things that about what it means to be a leader and how to carry out an effective leader-centric team. I have to admit that I’m a hands-on person, and truthfully, I learn from mistakes and from experience. But to understand these concepts, and to be bit more thoughtful of these concepts, it helps to really to promote a flow and growth in a team composition and productivity.
