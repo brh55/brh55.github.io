@@ -6,12 +6,12 @@ image:
     url: /assets/images/cover.jpg
 ---
 
-<div class="message">
-  If you came here for free ice cream, I'm sorry to disappoint.
-</div>
+> If you came here for free ice cream, I'm sorry to disappoint.
 
-Hello there,
+### Hello there stranger,
 
-I'm Brandon, a self-taught web developer and designer living in San Jose. Currently, I'm working as a Full-Stack Developer within a sales innovation team at [Cisco](https://cisco.com). I'm an avid coder and spend weekends completing small projects or contributing to open source projects. I enjoy being a mentor, mentee, and a toastmaster!
+I'm Brandon, a self-taught, user-centric developer (used to be a designer!) living in San Jose, California!
+
+Currently, I'm working as a full-stack developer within a Sales-driven innovation team at [Cisco](https://cisco.com). While, I'm an avid coder, I mainly enjoy the process of bootstrapping project and adapting to the needs of a project. If I'm not stationed at a coffee shop, you can catch me at one of the oldest Silicon Valley toastmasters club, [ArtICCulators](https://www.toastmasters.org/Find-a-Club/00005414-00005414).
 
 Feel free to contact me at through [email](mailto:brandonhim@live.com).
