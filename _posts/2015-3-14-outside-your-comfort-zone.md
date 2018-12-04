@@ -2,7 +2,8 @@
 layout: post
 title: Stepping Out of Your Own Comfort Zone
 comments: true
-tags: business, ceo, personal
+author: brandon
+categories: [business, ceo, personal]
 ---
 **What next?**
 
