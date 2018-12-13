@@ -5,7 +5,9 @@ comments: true
 author: brandon
 image: assets/images/scala-json.jpg
 categories: [scala, development]
+featured: true
 ---
+
 # Recursive JSON in Play Framework 2.6.X
 When handling nested JSON structures, it's not entirely straightforward since the example don't offer too much context in regards to handling this.
 We already know that a `Reads` converter needs a corresponding model.
