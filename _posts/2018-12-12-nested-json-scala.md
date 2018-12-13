@@ -114,7 +114,7 @@ case class Human("age": Int, sex: String, "children": Option[List[Human]])
 implicit val humanReads: Reads[Human] = (
     (__ \ "age").read[Int] and
     (__ \ "sex").read[String] and
-    (__ \ "chilidren).lazyReadullable[Reads.list[Human]](humanReads)
+    (__ \ "chilidren").lazyReadullable[Reads.list[Human]](humanReads)
 )(Human.apply _)
 ```
 
