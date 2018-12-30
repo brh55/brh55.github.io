@@ -103,8 +103,8 @@ Now login to your Discord account, and enter the authorization URL into your bro
 
 Once you hit `authorize`, and everything goes to plan, you should see an "authorized" image, and the bot will appear within your guild member list with the exception of it being offline, don't worry that is correct.
 
-<img width="190" style="float:right; display: block;" alt="screen shot 2018-12-30 at 10 24 41 am" src="https://user-images.githubusercontent.com/6020066/50550705-2034c600-0c2a-11e9-8d0c-38566a2f66d3.png">
-<img width="152" style="float:left; display: block;" alt="screen shot 2018-12-30 at 10 26 16 am" src="https://user-images.githubusercontent.com/6020066/50550706-2165f300-0c2a-11e9-8f34-c5c8d1ae732d.png">
+<img width="190" style="text-align: left;" alt="screen shot 2018-12-30 at 10 24 41 am" src="https://user-images.githubusercontent.com/6020066/50550705-2034c600-0c2a-11e9-8d0c-38566a2f66d3.png">
+<img width="152" style="text-align: right;" alt="screen shot 2018-12-30 at 10 26 16 am" src="https://user-images.githubusercontent.com/6020066/50550706-2165f300-0c2a-11e9-8f34-c5c8d1ae732d.png">
 
 Here we have the foundations of your bot register, and you can get on with part 2.
 
