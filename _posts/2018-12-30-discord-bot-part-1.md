@@ -3,7 +3,7 @@ layout: post
 title: Creating a Discord Magic 8 Ball (1/2)
 comments: true
 author: brandon
-image: assets/images/discord-tutorial-1.jpg
+image: assets/images/discord-tutorial-1.png
 categories: [discord, development, chatbot, bots]
 featured: true
 ---
