@@ -39,15 +39,15 @@ We first start our journey by entering the developer portal on Discord, this is 
 
 2. Locate the create an application button, and click on it     
 
-    <img width="322" alt="screen shot 2018-12-30 at 9 31 08 am" src="https://user-images.githubusercontent.com/6020066/50550716-2f1b7880-0c2a-11e9-98f4-accc157d1689.png">   
+<img width="322" alt="create application button" src="https://user-images.githubusercontent.com/6020066/50550716-2f1b7880-0c2a-11e9-98f4-accc157d1689.png">   
 
 From here we can provide key descriptions and information regarding our application. In this case, I provide a magic 8 ball icon taken from the interwebs, and register the name and description. Once you have everything set, click "save changes" from the pop-up bar below.
 
-    <img width="1009" alt="screen shot 2018-12-30 at 9 33 01 am" src="https://user-images.githubusercontent.com/6020066/50550765-ef08c580-0c2a-11e9-9371-830ad03a1b73.png">
+<img width="1009" alt="discord application profile" src="https://user-images.githubusercontent.com/6020066/50550765-ef08c580-0c2a-11e9-9371-830ad03a1b73.png">
 
 Next, we want to locate the left sidebar, and select "Bot"
 
-    <img width="300" alt="screen shot 2018-12-30 at 9 41 36 am" src="https://user-images.githubusercontent.com/6020066/50550711-275bd400-0c2a-11e9-8044-bc5156414af0.png">
+<img width="300" alt="discord side bar" src="https://user-images.githubusercontent.com/6020066/50550711-275bd400-0c2a-11e9-8044-bc5156414af0.png">
     
 Within the bot page, we select "Add Bot" and click "Yes, do it!"
 
@@ -65,7 +65,7 @@ But the one element we are most concerned about here is our **bot token**.
 >
 > If for any reason your token is compromised, you need to immediately regenerate your token to prevent any malicious people impersonating your bot and affecting your users
 
-<img width="654" alt="screen shot 2018-12-30 at 9 45 13 am" src="https://user-images.githubusercontent.com/6020066/50550710-2460e380-0c2a-11e9-88e9-60dc94ad1eeb.png">
+<img width="654" alt="bot page form" src="https://user-images.githubusercontent.com/6020066/50550710-2460e380-0c2a-11e9-88e9-60dc94ad1eeb.png">
 
 #### 💃🏻 *Viola!* 🕺🏾
 
@@ -93,18 +93,18 @@ https://discordapp.com/api/oauth2/authorize?client_id=XXXXXXX&scope=XXXXX&permis
 
 We can determine our permissions in the bot page, using the `bot permissions` helper tool. You'll only be needing to calculate these permissions every so often, so it's best to just use this tool to simplify and prevent any potential errors. In our bot, we only need `Send Messages`, so we can copy over the permissions integer for our bto, however, feel free to add any additional permissions to your bot to further experiment.
 
-<img width="652" alt="screen shot 2018-12-30 at 10 05 36 am" src="https://user-images.githubusercontent.com/6020066/50550715-2c208800-0c2a-11e9-96ce-6a0fe0107a62.png">
+<img width="652" alt="bot permissions" src="https://user-images.githubusercontent.com/6020066/50550715-2c208800-0c2a-11e9-96ce-6a0fe0107a62.png">
 
 Once we update these query parameters, we should have URL that looks like such: **`https://discordapp.com/api/oauth2/authorize?client_id=519988412309045254&scope=bot&permissions=2048`**	
 
 Now login to your Discord account, and enter the authorization URL into your browser, this will initiate a OAuth2 flow (without a redirect). This gives the user the opportunity to reflect on the permissions and opt-out of some level of permissions prior to adding the bot into their selected server.
 
-<img width="928" alt="screen shot 2018-12-30 at 10 21 16 am" src="https://user-images.githubusercontent.com/6020066/50550714-2b87f180-0c2a-11e9-8b39-5775500d6b05.png">
+<img width="928" alt="discord authorization url" src="https://user-images.githubusercontent.com/6020066/50550714-2b87f180-0c2a-11e9-8b39-5775500d6b05.png">
 
 Once you hit `authorize`, and everything goes to plan, you should see an "authorized" image, and the bot will appear within your guild member list with the exception of it being offline, don't worry that is correct.
 
-<img width="190" style="text-align: left;" alt="screen shot 2018-12-30 at 10 24 41 am" src="https://user-images.githubusercontent.com/6020066/50550705-2034c600-0c2a-11e9-8d0c-38566a2f66d3.png">
-<img width="152" style="text-align: right;" alt="screen shot 2018-12-30 at 10 26 16 am" src="https://user-images.githubusercontent.com/6020066/50550706-2165f300-0c2a-11e9-8f34-c5c8d1ae732d.png">
+<img width="190" style="text-align: left;" alt="authorized image" src="https://user-images.githubusercontent.com/6020066/50550705-2034c600-0c2a-11e9-8d0c-38566a2f66d3.png">
+<img width="152" style="text-align: right;" alt="bot in chat room" src="https://user-images.githubusercontent.com/6020066/50550706-2165f300-0c2a-11e9-8f34-c5c8d1ae732d.png">
 
 Here we have the foundations of your bot register, and you can get on with part 2.
 
