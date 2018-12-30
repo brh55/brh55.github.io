@@ -12,8 +12,8 @@ featured: true
 
 > **Important Links**
 >
-> - YouTube tutorial is available on my YouTube Channel: https://youtu.be/tYNjfvsGnSw
-> - All code is available on [GitHub.com/brh55/discord-magic-8-ball](https://github.com/brh55/discord-magic-8-ball)
+> - 🎦 YouTube tutorial is available on my YouTube Channel: https://youtu.be/tYNjfvsGnSw
+> - `⟨⟩` All code is available on [GitHub.com/brh55/discord-magic-8-ball](https://github.com/brh55/discord-magic-8-ball)
 
 As many of you know, getting started with your first chatbot can be rather daunting, there is new terminology, different methodologies, and just a completely different user-experience all-around. Well fear not, this tutorial will ease your way into the process of creating a simple, yet effective tutorial on building a discord bot.
 
@@ -87,9 +87,9 @@ https://discordapp.com/api/oauth2/authorize?client_id=XXXXXXX&scope=XXXXX&permis
 
  In this URL Scheme you'll notice **3** key important query parameters that we need to alter
 
-- `client_id`= the client id of your application, this can be found on your application page
-- `scope` = the scope or type of permissions we are requesting for, in the case `bot`
-- `permissions` = a integer representation of the set of permissions, in our case, we are requesting message permissions which is going to be `2048`
+- `client_id` - the client id of your application, this can be found on your application page
+- `scope` - the scope or type of permissions we are requesting for, in the case `bot`
+- `permissions` - a integer representation of the set of permissions, in our case, we are requesting message permissions which is going to be `2048`
 
 We can determine our permissions in the bot page, using the `bot permissions` helper tool. You'll only be needing to calculate these permissions every so often, so it's best to just use this tool to simplify and prevent any potential errors. In our bot, we only need `Send Messages`, so we can copy over the permissions integer for our bto, however, feel free to add any additional permissions to your bot to further experiment.
 
