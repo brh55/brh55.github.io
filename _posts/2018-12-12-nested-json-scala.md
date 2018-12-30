@@ -6,6 +6,7 @@ author: brandon
 image: assets/images/scala-json.jpg
 categories: [scala, development]
 featured: true
+excerpt: We will go over a unique feature from the JSON library provided by the Play Framework to handle a recursive data model
 ---
 
 When handling nested JSON structures, it's not entirely straightforward since the example don't offer too much context in regards to handling this.
