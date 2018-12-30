@@ -95,7 +95,11 @@ We can determine our permissions in the bot page, using the `bot permissions` he
 
 <img width="652" alt="bot permissions" src="https://user-images.githubusercontent.com/6020066/50550715-2c208800-0c2a-11e9-96ce-6a0fe0107a62.png">
 
-Once we update these query parameters, we should have URL that looks like such: **`https://discordapp.com/api/oauth2/authorize?client_id=519988412309045254&scope=bot&permissions=2048`**	
+Once we update these query parameters, we should have URL that looks like such:
+
+```
+https://discordapp.com/api/oauth2/authorize?client_id=519988412309045254&scope=bot&permissions=2048
+```
 
 Now login to your Discord account, and enter the authorization URL into your browser, this will initiate a OAuth2 flow (without a redirect). This gives the user the opportunity to reflect on the permissions and opt-out of some level of permissions prior to adding the bot into their selected server.
 
