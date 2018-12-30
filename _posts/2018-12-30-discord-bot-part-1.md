@@ -6,6 +6,7 @@ author: brandon
 image: assets/images/discord-tutorial-1.png
 categories: [discord, development, chatbot, bots]
 featured: true
+excerpt: The first part of the tutorial will cover over fundamental Discord terminology, and going over how to properly register and configure your application prior to development.
 ---
 
 > **Important Links**
