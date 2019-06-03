@@ -3,10 +3,11 @@ layout: post
 title: Creating a Discord Magic 8 Ball [Part 1/2]
 comments: true
 author: brandon
-image: assets/images/discord-bot-part2-cover.jpg
+image: assets/images/discord-tutorial-2.png
+categories: [discord, development, chatbot, bots]
 featured: true
-categories: [discord, chatbot]
----
+excerpt: The second part of the tutorial will dig into the codebase. Here we will learn the basics of botkit, and how to respond to incoming events.
+```
 
 > **Important Links**
 >
