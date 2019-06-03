@@ -4,6 +4,7 @@ title: A React-Native Troubleshooting Guide for Android
 comments: true
 author: brandon
 image: assets/images/react-native-troubleshoot.jpg
+featured: true
 categories: [react-native, android]
 ---
 
