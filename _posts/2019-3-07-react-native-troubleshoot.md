@@ -6,6 +6,7 @@ author: brandon
 image: assets/images/react-native-troubleshoot.jpg
 featured: true
 categories: [react-native, android]
+excerpt: Learning react-native can be troubling at first, in this guide, we will walkthrough all the potential common issues from the software to network layer.
 ---
 
 There you are running, `react-native init helloWorld` .
