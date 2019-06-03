@@ -7,7 +7,7 @@ image: assets/images/discord-tutorial-2.png
 categories: [discord, development, chatbot, bots]
 featured: true
 excerpt: The second part of the tutorial will dig into the codebase. Here we will learn the basics of botkit, and how to respond to incoming events.
-```
+---
 
 > **Important Links**
 >
