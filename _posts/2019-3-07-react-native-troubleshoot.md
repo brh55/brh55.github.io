@@ -23,7 +23,7 @@ You grasp the bill of your snapback, rotating it clockwise to 180 degrees, with 
 
 But are things as good as it seems?
 
-![Dev Round Table (2)](/Users/brhim/Desktop/Tutorials/Android Beginner Guide/Dev Round Table (2).jpg)
+![Dev Round Table (2)](https://cdn-images-1.medium.com/max/1600/1*CxKHOi9oAGGImJgaEIRE8g.jpeg)
 
 After deciding to delve back into react-native after a long hiatus, I realized how daunting it is to work through the tremendous amount of unexpected issues. I was a newcomer all over, again.
 
@@ -51,7 +51,7 @@ Probably worth noting that I'm also running Mac OS, so there will be some discre
 
 So you've ran `react-native run-android`, and now you are on your simulator and device and you are plagued with a blank screen
 
-![issue](/Users/brhim/Desktop/Tutorials/Android Beginner Guide/issue.jpeg)
+![issue](https://cdn-images-1.medium.com/max/1600/1*ABt3We4rkbZBXK8puWkSZQ.jpeg
 
 
 
@@ -60,11 +60,11 @@ So you've ran `react-native run-android`, and now you are on your simulator and 
 Let's start by deducing which layer is the issue stemming from: the Packager (Layer 7) or the Network (Layer 3).
 
 First, ensure your Metro Bundler / React-Native Packager *(a bundler that will prepare our JS code and create a usable compiled code for our targeted platform)* is running, this is the detached terminal that looks like this:
-    ![Packager](/Users/brhim/Desktop/Tutorials/Android Beginner Guide/Packager.png)
+    ![Packager](https://cdn-images-1.medium.com/max/1600/1*bU42aOkLZWE2Y5PD1wY6Wg.png)
 
 You can use this troubleshooting flow diagram to figure out where to start
 
-![Start Flow](/Users/brhim/Desktop/Tutorials/Android Troubleshoot/Start Flow.png)
+![Start Flow](https://cdn-images-1.medium.com/max/1600/1*jV8VrMEb_G3coO5TzQsjww.png)
 
 #### 1. Is the app bundling?
 
@@ -82,7 +82,7 @@ Go to on our host machine, open up the browser and enter the following URL,  [ht
 
 ###	Packager Troubleshooting
 
-![pck flow diagram](/Users/brhim/Desktop/Tutorials/Android Beginner Guide/pck flow diagram.png)
+![pck flow diagram](https://cdn-images-1.medium.com/max/1600/1*GakcS-RQ9a02dPhLWUVHOw.png)
 
 #### 2. Does it show a port related error?
 
@@ -148,7 +148,7 @@ Before getting started, I highly recommend reading the documentation on [Android
 
 Now that's covered, let's refer to the diagram below:
 
-![Network Flow Diagram](/Users/brhim/Desktop/Tutorials/Android Troubleshoot/Network Flow Diagram.png)
+![Network Flow Diagram](https://cdn-images-1.medium.com/max/1600/1*GDC_9fYADV6lolR1O2r7YA.png)
 
 #### 4. Set "Reverse" Port Forwarding
 
@@ -243,7 +243,7 @@ There can be times when you are away your standard WiFi network and there are so
 
    4. Find the ngrok URL used to forward traffic to your webserver located on the line that specifies "Forwarding"
 
-      ![ngrok-url](/Users/brhim/Desktop/Tutorials/Android Troubleshoot/ngrok-url.png)
+      ![ngrok-url](https://cdn-images-1.medium.com/max/1600/1*-ffwJMJNnWxhxV-l2ek6xQ.png)
 
    5. Set that URL without the port and http protocol in your "Dev Settings" > "Set Debug Host & Port for Device". In this case, we would set it to "7383ff09.ngrok.io"
 
@@ -257,10 +257,8 @@ Otherwise, I'm hoping I've managed to save you some tears and agony!
 
 ![Image of Clapping Success](https://media.giphy.com/media/l49JCSwMXyxHnYJws/giphy.gif)
 
-If you've found this incredibly useful please give send a few claps this way :) — they honestly help determine what to write about. Now if you want to see more posts like this or other react-native projects in follow me on any of these venues:
+Now if you want to see more posts like this or other react-native projects in follow me on any of these venues:
 
 - [GitHub](https://github.com/brh55)
 - [YouTube](https://www.youtube.com/channel/UCludBg4ol9VgvHzHe-yRUXw)
 - [Twitter](https://twitter.com/HimBrandon)
-
-Thanks so much for reading!
