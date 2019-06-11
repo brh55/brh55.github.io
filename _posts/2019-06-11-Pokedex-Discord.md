@@ -9,8 +9,6 @@ featured: true
 excerpt: The first part of this tutorial will cover over gathering requirements, and defining our Pokedex chatbot
 ---
 
-# Creating a Pokédex Chatbot in Discord (Part 1)
-
 ![Image result for professor oak introduction game](https://i.pinimg.com/originals/c5/59/9e/c5599efc1e9a7d4787050c0c396e572b.png)
 
 > Hello there! Welcome to the world of Pokémon! My name is Brandon! People call me the chatbot professor! This world is inhabited by intelligent creatures called chatbots! For some people, chatbots are tools. Others use them for fun. Myself...I study chatbots as a profession.
