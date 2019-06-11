@@ -3,7 +3,7 @@ layout: post
 title: Creating a Pokédex Chatbot in Discord (Part 1)
 comments: true
 author: brandon
-image: assets/images/pokedex-tutorial.png
+image: assets/images/pokedex-tutorial.jpg
 categories: [discord, development, chatbot, bots, pokemon]
 featured: true
 excerpt: The first part of this tutorial will cover over gathering requirements, and defining our Pokedex chatbot
