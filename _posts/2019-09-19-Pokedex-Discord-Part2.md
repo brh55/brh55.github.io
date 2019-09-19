@@ -44,8 +44,6 @@ Let's start by going over the external services and framework we are going to le
 
 We will be using the [PokeAPI](https://pokeapi.co/), which provides a tremendous amount of content regarding Pokemon information (abilities, stats, types, sprites, and more).
 
-![image-20190611173635850](/var/folders/0m/mv8rkvws4cv2d9qgrlf195qm0000gp/T/abnerworks.Typora/image-20190611173635850.png)
-
 Feel free to spend some time exploring the API to get an idea of what's available. Also, we will be using an API wrapper for Node.js to allow us to easily interact with the API. Fortunately, PokeAPI provides us with a node-based wrapper called [Pokedex-Promise-V2](https://github.com/PokeAPI/pokedex-promise-v2).
 
 ##### Chatbot Framework
@@ -56,8 +54,6 @@ Feel free to spend some time exploring the API to get an idea of what's availabl
 The next technology we will look at is the framework. To simplify interactions chatbot nuisances, I'm a big fan of [Botkit](https://github.com/howdyai/botkit), something I've tested and used in a production environment as well.
 
 Discord isn't a built-in platform, but I've created an open-source custom connector called [botkit-discord](https://github.com/brh55/botkit-discord) to simplify that piece for you.
-
-![image-20190611174418743](/var/folders/0m/mv8rkvws4cv2d9qgrlf195qm0000gp/T/abnerworks.Typora/image-20190611174418743.png)
 
 This will abstract the configuration and Discord functionality for our tutorial, as well as give us all of the botkit methods a lot of us are familiar with.
 
