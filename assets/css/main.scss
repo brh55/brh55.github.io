@@ -12,3 +12,36 @@
 @import
 	"syntax"
 ;
+
+/* Prism.js overrides — let Prism handle code block styling */
+div.highlighter-rouge {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+div.highlighter-rouge pre.highlight {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+div.highlighter-rouge pre[class*="language-"] {
+  border-radius: 6px;
+  margin: 1.5em 0;
+}
+
+/* Ensure Prism code uses Fira Code */
+code[class*="language-"],
+pre[class*="language-"] {
+  font-family: 'Fira Code', Consolas, Monaco, 'Andale Mono', monospace !important;
+  font-size: 0.7em;
+}
+
+/* Kill any Rouge .err (error) red highlighting that leaks through */
+.highlight .err {
+  color: inherit !important;
+  background-color: transparent !important;
+  border: none !important;
+}

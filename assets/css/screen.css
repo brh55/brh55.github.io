@@ -223,6 +223,23 @@ License: https://www.wowthemes.net/freebies-license/
  .mainheading h1.sitetitle {
      font-family:Righteous;
 }
+ .mainheading h1.sitetitle .site-logo {
+     font-family: 'Fira Code', monospace;
+     font-weight: 700;
+     letter-spacing: -1px;
+     color: #333;
+}
+ .mainheading h1.sitetitle .site-logo .ish {
+     color: #00ab6b;
+}
+ .mainheading h1.sitetitle .site-byline {
+     font-family: 'Merriweather', serif;
+     font-weight: 300;
+     font-size: 0.45em;
+     color: #999;
+     vertical-align: middle;
+     margin-left: 4px;
+}
  .mainheading h1.posttitle {
      font-weight:700;
      margin-bottom:1rem;

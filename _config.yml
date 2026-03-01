@@ -1,7 +1,8 @@
 # Site
-name: "Brandon Him"
-description: "Developer, Open-sourcer, Passionate Dabbler"
-meta_description: "Silicon Valley based developer who is quirky and loves creating things"
+name: "Developer.ish"
+author_byline: "by Brandon Him"
+description: "Think in products, build with systems, ship with AI"
+meta_description: "Think in products, build with systems, ship with AI"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
 google_analytics: 'UA-46278016-1'

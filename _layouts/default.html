@@ -15,10 +15,15 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     
 <link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
     
 <link href="{{ site.baseurl }}/assets/css/screen.css" rel="stylesheet">
-    
+
 <link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet">
+
+<!-- Prism.js syntax highlighting -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
     
 </head>
     
@@ -83,7 +88,7 @@
 				
 				  
                 <li class="nav-item">
-					<a class="nav-link" href="https://instagram.com/codingbyhim"><i class="fab fa-instagram"></i> Instagram</a>
+					<a class="nav-link" href="https://www.instagram.com/developer.ish/"><i class="fab fa-instagram"></i> Instagram</a>
 				</li>
                 
             </ul>		
@@ -103,7 +108,7 @@
 <!-- Site Title
 ================================================== -->
 <div class="mainheading">
-    <h1 class="sitetitle">{{ site.name }}</h1>
+    <h1 class="sitetitle"><span class="site-logo">Developer<span class="ish">.ish</span></span> <span class="site-byline">{{ site.author_byline }}</span></h1>
     <p class="lead">
          {{ site.description }}
     </p>
@@ -198,5 +203,38 @@
 <script src="{{ site.baseurl }}/assets/js/mediumish.js"></script>
     
 <script id="dsq-count-scr" src="//{{site.disqus}}.disqus.com/count.js"></script>
+
+<!-- Prism.js syntax highlighting -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-graphql.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-yaml.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-ruby.min.js"></script>
+<script>
+  // Bridge Rouge (Jekyll) output to Prism.js
+  // Rouge: <div class="language-xxx highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...</code></pre></div></div>
+  // Prism expects: <pre><code class="language-xxx">plain text</code></pre>
+  document.querySelectorAll('div.highlighter-rouge').forEach(function(block) {
+    var lang = (block.className.match(/language-(\S+)/) || [])[1];
+    if (!lang || lang === 'plaintext' || lang === 'text') return;
+    var code = block.querySelector('pre > code');
+    if (!code) return;
+    // Strip Rouge spans, get plain text
+    code.textContent = code.textContent;
+    // Add Prism language class
+    code.className = 'language-' + lang;
+    code.parentElement.className = 'language-' + lang;
+    // Let Prism highlight
+    Prism.highlightElement(code);
+  });
+</script>
+
+<!-- Mermaid.js for dynamic diagrams -->
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true, theme: 'default' });
+</script>
 </body>
 </html>
