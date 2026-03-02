@@ -20,9 +20,10 @@ authors:
     web: https://developeri.sh
   
 # Plugins
-plugins: 
+plugins:
   - jekyll-paginate
   - jekyll-archives
+  - jekyll-sitemap
     
 # Archives
 jekyll-archives:
