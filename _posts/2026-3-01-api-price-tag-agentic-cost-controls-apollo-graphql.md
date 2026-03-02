@@ -13,6 +13,8 @@ excerpt: AI agents are hitting your GraphQL API and you have no way to meter the
 
 If you're running an enterprise GraphQL API, there's a good chance AI agents are already consuming it, or they will be soon. Internal copilots, customer-facing AI features, third-party integrations built on LLMs. These aren't humans clicking through a dashboard. They're automated systems firing off queries at a pace and volume that traditional rate limiting wasn't designed for.
 
+Gokul Rajaram [recently argued](https://joincolossus.com/episode/gokul-rajaram-the-future-of-saas/) that per-seat pricing is collapsing as AI agents replace human users, and the companies that can't meter at the operation level are the most exposed. GraphQL teams have an advantage here, the schema already describes the cost of every field. The question is whether you're using it.
+
 And here's the problem: a simple request-per-second rate limiter treats all queries the same. But we know that's not how GraphQL works. A query that fetches a single user's name and a query that fans out across five subgraphs, pulls 200 records, and hits an external ML service are wildly different in terms of actual cost. Treating them equally is like charging the same toll for a bicycle and an 18-wheeler.
 
 So the question becomes: **how do you meter, budget, and control the cost of agentic access to your graph?**

@@ -1,4 +1,5 @@
 # Site
+url: "https://developeri.sh"
 name: "Developer.ish"
 author_byline: "by Brandon Him"
 description: "Think in products, build with systems, ship with AI"
@@ -13,10 +14,10 @@ authors:
   brandon:
     name: Brandon
     display_name: Brandon Him
+    description: "Solutions Engineering at Apollo GraphQL. Ex-Okta, Ex-Cisco."
     gravatar: 49a4f5377b60e3fcc194ca4a9c7ffb00
     email: brandonhim@live.com
-    web: https://brandonhim.com
-    twitter: https://twitter.com/himbrandon
+    web: https://developeri.sh
   
 # Plugins
 plugins: 

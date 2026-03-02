@@ -13,6 +13,55 @@
 	"syntax"
 ;
 
+/* Author box cleanup */
+.post-top-meta {
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.post-top-meta .col-md-1 {
+  padding-right: 0;
+  max-width: 60px;
+  flex: 0 0 60px;
+}
+
+.post-top-meta .author-thumb {
+  width: 48px !important;
+  height: 48px !important;
+}
+
+.post-top-meta .col-md-11 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+}
+
+.post-top-meta .col-md-11 a.link-dark {
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.post-top-meta .author-description {
+  display: block;
+  font-size: 0.85rem;
+  color: rgba(0,0,0,.5);
+  margin-top: 1px;
+  margin-bottom: 0;
+  line-height: 1.3;
+}
+
+/* Post meta (date + reading time) under title */
+.post-meta-top {
+  font-size: 0.95rem;
+  color: #999;
+  margin-top: -5px;
+  margin-bottom: 1.5rem;
+}
+
 /* Prism.js overrides — let Prism handle code block styling */
 div.highlighter-rouge {
   background: none !important;

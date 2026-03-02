@@ -8,8 +8,16 @@
     
 <title>{{ page.title }} | {{site.name}}</title>
     
-{% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %} 
-    
+{% if page.excerpt %}<meta name="description" content="{{ page.excerpt | strip_html | truncatewords: 50 }}">{% elsif page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+
+<!-- Open Graph -->
+<meta property="og:title" content="{{ page.title | default: site.name }}" />
+<meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}" />
+<meta property="og:url" content="{{ page.url | absolute_url }}" />
+<meta property="og:site_name" content="{{ site.name }}" />
+{% if page.excerpt %}<meta property="og:description" content="{{ page.excerpt | strip_html | truncatewords: 50 }}" />{% elsif site.description %}<meta property="og:description" content="{{ site.description }}" />{% endif %}
+{% if page.image %}<meta property="og:image" content="{{ page.image | absolute_url }}" />{% elsif site.logo %}<meta property="og:image" content="{{ site.logo | absolute_url }}" />{% endif %}
+
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">

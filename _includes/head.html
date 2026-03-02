@@ -5,8 +5,8 @@
 	<link rel="canonical" href="{{ canonical }}" />
 	<meta name="description" content="{% if page.quote %}{{ page.quote }}{% else %}{{ page.content | strip_html | truncatewords: 20 }}{% endif %}" />
 	<meta property="og:description" content="{% if page.quote %}{{ page.quote }}{% else %}{{ page.content | strip_html | truncatewords: 20 }}{% endif %}" />
-	<meta itemprop="image" content="{% if page.image.url %}{{ site.url }}{{ site.baseurl }}{{ page.image.url }}{% else %}{{ site.url }}{{ site.baseurl }}{{ site.icon }}{% endif %}" />
-	<meta property="og:image" content="{% if page.image.url %}{{ site.url }}{{ site.baseurl }}{{ page.image.url }}{% else %}{{ site.url }}{{ site.baseurl }}{{ site.icon }}{% endif %}" />
+	<meta itemprop="image" content="{% if page.image.url %}{{ site.url }}{{ site.baseurl }}/{{ page.image.url }}{% elsif page.image %}{{ site.url }}{{ site.baseurl }}/{{ page.image }}{% else %}{{ site.url }}{{ site.baseurl }}/{{ site.icon }}{% endif %}" />
+	<meta property="og:image" content="{% if page.image.url %}{{ site.url }}{{ site.baseurl }}/{{ page.image.url }}{% elsif page.image %}{{ site.url }}{{ site.baseurl }}/{{ page.image }}{% else %}{{ site.url }}{{ site.baseurl }}/{{ site.icon }}{% endif %}" />
 	<meta property="og:title" content="{{ page.title }}" />
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="{{ canonical }}" />
