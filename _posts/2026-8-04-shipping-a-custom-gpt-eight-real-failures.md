@@ -110,6 +110,10 @@ The rewrite that passed reframed the same rule as a **required reply element**:
 
 **Lesson:** models treat output-format requirements as contracts and behavioral prose as mood lighting. If you need a behavior every time, make it a format element — and write an eval scenario that fails without it.
 
+What it looks like when the contracts hold — verified data, honest caveats, and a proactive next step, straight from the editor's preview pane:
+
+![The GPT preview pane showing a reply with images, caveats relayed, freshness confirmations, and a closing offer to search more]({{ site.baseurl }}/assets/images/gpt-preview-example.png)
+
 ## Failure 8: The GPT builder is a deploy target, and ours had drifted
 
 While grabbing screenshots for this post we found one more gap, live in production: the builder's Actions panel showed only three operations. Our picks endpoint — added weeks ago, and referenced by the live instructions — **wasn't in the imported schema at all.** The instructions were telling the model to lead with a tool it didn't have.
