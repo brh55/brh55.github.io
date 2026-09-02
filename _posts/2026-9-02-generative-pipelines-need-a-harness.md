@@ -13,8 +13,6 @@ I've been building **krama.tv**, a channel of AI-generated Khmer-language vertic
 
 The reason is plain enough: I think there should be content made for the Khmer diaspora, and content that puts native Khmer people, figures, and voices on screen — and there isn't much of either. That's the gap the project exists to fill.
 
-![krama.tv, the streaming front end — two series, Khmer first with an English toggle]({{ site.baseurl }}/assets/images/krama-tv-site.png)
-
 What's been remarkable is how it fails.
 
 In software we have types, tests, CI, diffs, code review — decades of machinery whose entire job is to make failure *loud*. A generative pipeline ships with none of that, and the unifying lesson up front: **the characteristic failure of a generative pipeline is not a crash — it is plausible output.** A wrong reference transcript doesn't throw. A script that halves your audio on the second run prints a cheerful summary. A voice that is a different person in every build still says the lines. Every failure below is real, measured, and exited zero. This post is the harness I had to build, because nobody ships one for this.
