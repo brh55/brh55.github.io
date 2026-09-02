@@ -5,7 +5,7 @@ comments: true
 author: brandon
 image: assets/images/krama-tv-site.png
 categories: [development, ai, llm, media]
-featured: false
+featured: true
 excerpt: Nothing in my AI video pipeline ever crashed. It shipped a wrong transcript, re-cast a character on every build, and quietly halved my audio — all with clean exit codes. Seven silent failures from building krama.tv, and the harness I had to build because generative pipelines don't come with one.
 ---
 
