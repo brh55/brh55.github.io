@@ -10,7 +10,7 @@ image:
 
 I build things. Sometimes for big companies, sometimes for myself, always with the goal of making something genuinely useful for people.
 
-By day, I work at [Apollo GraphQL](https://apollographql.com), helping enterprise teams adopt technologies like the Supergraph, working at the intersection of federated architectures and the shift toward AI-native infrastructure. By night (and weekends, and early mornings), I use AI to prototype and ship projects that would have taken me months to build solo just a few years ago.
+By day, I work at [Qodo](https://qodo.ai), where we build AI agents for code review and code quality, helping engineering teams ship faster without trading away trust in what they ship. By night (and weekends, and early mornings), I use AI to prototype and ship projects that would have taken me months to build solo just a few years ago.
 
 ### Where I Come From
 
@@ -22,7 +22,7 @@ Looking back, that rewired how I think. It gave me a mental model I carry into e
 
 I've been building online for as long as I can remember. As a kid, I ran popular gaming forums where I picked up design, community management, and my first taste of code. By my late teens, as my hobbies changed, I kept doing the same thing: building around whatever I was passionate about. That's how I ended up managing and developing the experiences around popular Tumblr blogs with massive followings. Adventure Time Club grew to 250,000 followers at a pace of 20K a week. An Allegory of Aesthetics, a men's fashion blog, built up to 20,000 followers. I was learning how to create audiences and craft experiences before I even knew that was a career.
 
-In college, I got exposed to hackathon culture, and that's what shifted everything. I participated in over 10 hackathons throughout school and another 10 across my professional career, some taking me across the world like [competing in Bangkok at the APEC App Challenge](https://www.apec.org/press/news-releases/2022/an-app-for-reducing-food-waste-lands-first-place-at-apec-app-challenge). It changed my career aspirations entirely. I wanted to build, not just curate. I started as a designer, taught myself to develop, and worked across Urban Outfitters, Cisco, Okta, and now Apollo GraphQL, each time gravitating toward the messy intersection of product and engineering. I ran [Pixels on Ridge](https://pixelsonridge.com), a Fitbit app studio where I built SDKs and reusable components for what was a pretty lacking developer tooling ecosystem at the time. It became one of the top clockfaces in 2020 before Google retired Fitbit OS. I also built [open-source projects](https://github.com/brh55/react-native-masonry) on npm that were downloaded millions of times and used in thousands of projects.
+In college, I got exposed to hackathon culture, and that's what shifted everything. I participated in over 10 hackathons throughout school and another 10 across my professional career, some taking me across the world like [competing in Bangkok at the APEC App Challenge](https://www.apec.org/press/news-releases/2022/an-app-for-reducing-food-waste-lands-first-place-at-apec-app-challenge). It changed my career aspirations entirely. I wanted to build, not just curate. I started as a designer, taught myself to develop, and worked across Urban Outfitters, Cisco, Okta, Apollo GraphQL, and now Qodo, each time gravitating toward the messy intersection of product and engineering. I ran [Pixels on Ridge](https://pixelsonridge.com), a Fitbit app studio where I built SDKs and reusable components for what was a pretty lacking developer tooling ecosystem at the time. It became one of the top clockfaces in 2020 before Google retired Fitbit OS. I also built [open-source projects](https://github.com/brh55/react-native-masonry) on npm that were downloaded millions of times and used in thousands of projects.
 
 Through all of it, the thread has been the same: take something complicated, understand it deeply, then make it simple enough that someone else can use it without thinking twice.
 
@@ -31,6 +31,12 @@ Through all of it, the thread has been the same: take something complicated, und
 **[tinyjawns](https://tinyjawns.com)** is my current passion project, built with my wife. It's a family-centric newsletter for Philly families that helps parents find the best things to do with their kids each week.
 
 Under the hood, it runs an autonomous event discovery system powered by AI that surfaces thousands of events every month. AI agents help curate and filter through all that noise, sorting the best across categories. But the final layer is us. Every Wednesday night after the kids are asleep, my wife and I spend a couple hours reflecting, debating, and sometimes arguing about what to include. We add our editorial insight, parent-focused advice, and the kind of deeply local taste that AI can't replicate. We ship every Thursday at 5PM, and the numbers tell us people value it: close to 40% open rates and click-to-open rates in the mid teens.
+
+The newsletter has a sibling on Instagram. I run **[@tiny.jawn](https://www.instagram.com/tiny.jawn/)**, where I make short-form videos about family life in Philly that regularly reach 500K to 1M views a month. That same old instinct from the Tumblr days, building an audience around what I care about, just with a stroller now. A few that took off:
+
+- [350K+ views, 17K likes](https://www.instagram.com/p/DgAsJnBvV0V/)
+- [500K+ views, 13K likes](https://www.instagram.com/p/Deuc8ZyPpaP/)
+- [80K views, 1.5K likes](https://www.instagram.com/p/Dfxx9iUvyVi/)
 
 It captures what I'm most passionate about right now: solving mundane, small problems using technology to make the important parts of your life incrementally (or significantly) better.
 
@@ -52,4 +58,4 @@ This blog is where I write about all of it: enterprise GraphQL, AI-assisted buil
 ![Bangkok](https://user-images.githubusercontent.com/6020066/58042115-a4f78200-7aee-11e9-97ee-a384eef1f884.jpg){:height="400" style="display:inline-block;margin-left: 5px; margin-top:5px;"}
 ![Berlin](https://user-images.githubusercontent.com/6020066/58290834-f6fb0a80-7d6f-11e9-9ea4-e6147f4809a4.JPG){:height="400" style="display:inline-block;margin-left: 5px; margin-top:5px;"}
 
-Feel free to reach out through [email](mailto:brandonhim@live.com) or find me on [GitHub](https://github.com/brh55) and [Instagram](https://www.instagram.com/developer.ish/).
+Feel free to reach out through [email](mailto:brandonhim@live.com) or find me on [GitHub](https://github.com/brh55) and Instagram at [@developer.ish](https://www.instagram.com/developer.ish/) and [@tiny.jawn](https://www.instagram.com/tiny.jawn/).
