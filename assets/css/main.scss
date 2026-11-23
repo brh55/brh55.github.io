@@ -85,7 +85,6 @@ div.highlighter-rouge pre[class*="language-"] {
 code[class*="language-"],
 pre[class*="language-"] {
   font-family: 'Fira Code', Consolas, Monaco, 'Andale Mono', monospace !important;
-  font-size: 0.7em;
 }
 
 /* Kill any Rouge .err (error) red highlighting that leaks through */
@@ -94,3 +93,6 @@ pre[class*="language-"] {
   background-color: transparent !important;
   border: none !important;
 }
+
+// Bauhaus refresh — loaded last so it wins over screen.css and the rules above.
+@import "bauhaus";
