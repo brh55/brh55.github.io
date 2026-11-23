@@ -1,0 +1,842 @@
+// ==========================================================================
+// Bauhaus refresh
+// Primary red / yellow / blue on bone, near-black ink, hard rules, geometry.
+// Layered on top of the Mediumish theme (screen.css + Bootstrap 4).
+// Keep this file compatible with the Ruby Sass used by GitHub Pages:
+// no @use, no Sass min()/max(), plain CSS custom properties for runtime tokens.
+// ==========================================================================
+
+// ---- Sass tokens ---------------------------------------------------------
+$bh-red:      #d42a1d;   // 5.0:1 on bone — large text, accents, hovers
+$bh-blue:     #1c4fa0;   // 7.4:1 on bone — links
+$bh-yellow:   #f4b400;   // decorative only, never text on bone
+$bh-ink:      #141414;
+$bh-ink-soft: #45413c;   // 9:1 on bone — secondary text
+$bh-bone:     #f3eee4;
+$bh-paper:    #fbf8f2;
+$bh-rule:     3px;
+
+$bh-display: 'Jost', 'Futura', 'Century Gothic', 'Avenir Next', sans-serif;
+$bh-text:    'DM Sans', -apple-system, system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$bh-mono:    'Fira Code', Consolas, Monaco, 'Andale Mono', monospace;
+
+$bh-ease: cubic-bezier(.2, .8, .2, 1);
+
+// ---- Runtime tokens ------------------------------------------------------
+:root {
+  --bh-red: #{$bh-red};
+  --bh-blue: #{$bh-blue};
+  --bh-yellow: #{$bh-yellow};
+  --bh-ink: #{$bh-ink};
+  --bh-ink-soft: #{$bh-ink-soft};
+  --bh-bone: #{$bh-bone};
+  --bh-paper: #{$bh-paper};
+  --bh-accent: var(--bh-red);
+  --bh-delay: 0ms;
+}
+
+// ---- Base ----------------------------------------------------------------
+html { scroll-behavior: smooth; }
+
+body {
+  background: $bh-bone;
+  color: $bh-ink;
+  font-family: $bh-text;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+::selection { background: $bh-yellow; color: $bh-ink; }
+
+a {
+  color: $bh-blue;
+  transition: color .2s $bh-ease, background-size .3s $bh-ease;
+}
+a:hover, a:focus { color: $bh-red; }
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid $bh-yellow;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 6px $bh-ink;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  font-family: $bh-display;
+  color: $bh-ink;
+  letter-spacing: -.01em;
+}
+
+.text-dark { color: $bh-ink !important; }
+.bg-white { background-color: transparent !important; }
+
+.site-content {
+  padding-top: 2rem;
+  margin-top: 64px;
+}
+
+// ---- Navigation ----------------------------------------------------------
+.mediumnavigation {
+  background: rgba($bh-bone, .96);
+  border-bottom: $bh-rule solid $bh-ink;
+  box-shadow: none;
+  padding-top: .55rem;
+  padding-bottom: .55rem;
+  -webkit-backdrop-filter: saturate(1.2) blur(6px);
+  backdrop-filter: saturate(1.2) blur(6px);
+
+  // Tri-colour strip along the top edge.
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 5px;
+    background: linear-gradient(90deg,
+      $bh-red 0 33.33%, $bh-yellow 33.33% 66.66%, $bh-blue 66.66% 100%);
+  }
+
+  .navbar-brand img {
+    max-height: 32px;
+    transition: transform .6s $bh-ease;
+  }
+  .navbar-brand:hover img { transform: rotate(-90deg); }
+
+  .nav-item { font-size: .8rem; }
+
+  .nav-link {
+    position: relative;
+    font-family: $bh-display;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    color: $bh-ink !important;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: .8rem; right: .8rem; bottom: .1rem;
+      height: 3px;
+      background: $bh-red;
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform .3s $bh-ease;
+    }
+    &:hover::after, &:focus::after { transform: scaleX(1); }
+  }
+  .nav-item.active .nav-link::after { transform: scaleX(1); background: $bh-blue; }
+
+  .navbar-toggler {
+    border: 2px solid $bh-ink;
+    border-radius: 0;
+  }
+}
+
+// ---- Masthead ------------------------------------------------------------
+.site-content > .container > .mainheading {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "title motif" "lead motif";
+  align-items: end;
+  column-gap: 2rem;
+  padding: 1.5rem 0 2rem;
+  margin-bottom: 2.5rem;
+  border-bottom: $bh-rule solid $bh-ink;
+
+  h1.sitetitle {
+    grid-area: title;
+    margin: 0 0 .75rem;
+    font-family: $bh-display;
+    line-height: .95;
+  }
+  .lead {
+    grid-area: lead;
+    margin: 0;
+    max-width: 34rem;
+    font-family: $bh-text;
+    font-size: 1.2rem;
+    color: $bh-ink-soft;
+  }
+  .bh-motif { grid-area: motif; }
+}
+
+.mainheading h1.sitetitle .site-logo {
+  display: inline-block;
+  font-family: $bh-display;
+  font-weight: 800;
+  font-size: clamp(2.1rem, 7vw, 5.25rem);
+  white-space: nowrap;
+  letter-spacing: -.035em;
+  color: $bh-ink;
+  animation: bh-rise .8s $bh-ease both;
+
+  .ish {
+    color: $bh-red;
+    display: inline-block;
+    animation: bh-rise .8s .12s $bh-ease both;
+  }
+}
+
+.mainheading h1.sitetitle .site-byline {
+  display: block;
+  margin: .9rem 0 0;
+  font-family: $bh-display;
+  font-weight: 600;
+  font-size: .9rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: $bh-ink-soft;
+  vertical-align: baseline;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 2.25rem;
+    height: 3px;
+    margin-right: .75rem;
+    vertical-align: middle;
+    background: $bh-ink;
+  }
+}
+
+// Header motif
+.bh-motif {
+  width: 220px;
+  height: auto;
+  overflow: visible;
+
+  &__circle   { fill: $bh-red; }
+  &__square   { fill: $bh-blue; }
+  &__triangle { fill: $bh-yellow; }
+  &__bar      { fill: $bh-ink; }
+  &__dot      { fill: $bh-ink; }
+
+  > * {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: bh-pop .9s $bh-ease both;
+  }
+  &__bar      { transform-origin: left center; animation-name: bh-wipe; animation-delay: .05s; }
+  &__square   { animation-delay: .15s; }
+  &__circle   { animation-delay: .3s; }
+  &__triangle { animation-delay: .45s; }
+  &__dot      { animation-delay: .6s; }
+
+}
+.bh-motif:hover .bh-motif__circle   { transform: translateX(-10px); }
+.bh-motif:hover .bh-motif__square   { transform: rotate(8deg); }
+.bh-motif:hover .bh-motif__triangle { transform: translateY(-8px) rotate(-6deg); }
+.bh-motif:hover .bh-motif__dot      { transform: scale(1.4); }
+.bh-motif:hover > * { transition: transform .5s $bh-ease; }
+
+// Compact masthead on posts and pages so the article leads.
+.layout-post,
+.layout-page {
+  .site-content > .container > .mainheading {
+    padding: .5rem 0 1.25rem;
+    margin-bottom: 2rem;
+
+    .lead { display: none; }
+    .site-byline { display: none; }
+    .bh-motif { width: 110px; }
+  }
+  .mainheading h1.sitetitle .site-logo { font-size: clamp(2rem, 5vw, 3rem); }
+}
+
+// ---- Section titles ------------------------------------------------------
+.section-title h2 {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  border-bottom: 0;
+  margin-bottom: 1.75rem;
+  font-family: $bh-display;
+  font-weight: 700;
+  font-size: .95rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+
+  span {
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+  &::before {
+    content: "";
+    flex: 0 0 auto;
+    width: .9rem;
+    height: .9rem;
+    background: var(--bh-accent);
+  }
+  &::after {
+    content: "";
+    flex: 1 1 auto;
+    height: $bh-rule;
+    background: $bh-ink;
+  }
+}
+.featured-posts .section-title h2::before { border-radius: 50%; }
+.recent-posts   .section-title h2::before { background: $bh-blue; }
+
+// Page titles (About etc.) are big statements.
+.layout-page .section-title h2 {
+  display: block;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -.025em;
+  text-transform: none;
+  max-width: 46rem;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
+  border-bottom: $bh-rule solid $bh-ink;
+
+  &::before {
+    display: block;
+    width: 3.25rem;
+    height: 3.25rem;
+    margin-bottom: 1.25rem;
+    background: $bh-yellow;
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  }
+  &::after { display: none; }
+}
+
+// ---- Cards (featured + list) --------------------------------------------
+.listfeaturedtag,
+.listrecent .card {
+  position: relative;
+  background: $bh-paper;
+  border: 2px solid $bh-ink;
+  border-radius: 0;
+  box-shadow: 0 0 0 0 var(--bh-accent);
+  transition: transform .35s $bh-ease, box-shadow .35s $bh-ease;
+
+  &:hover, &:focus-within {
+    transform: translate(-5px, -5px);
+    box-shadow: 10px 10px 0 0 var(--bh-accent);
+  }
+}
+
+// Rotate accent colours through the grid.
+.featured-posts > .row > div:nth-child(3n+1),
+.listrecent > div:nth-child(3n+1) { --bh-accent: #{$bh-red}; }
+.featured-posts > .row > div:nth-child(3n+2),
+.listrecent > div:nth-child(3n+2) { --bh-accent: #{$bh-blue}; }
+.featured-posts > .row > div:nth-child(3n+3),
+.listrecent > div:nth-child(3n+3) { --bh-accent: #{$bh-yellow}; }
+
+.listfeaturedtag .card,
+.listrecent .card .card-body,
+.card-footer {
+  background: transparent;
+  border-radius: 0;
+}
+
+.listfeaturedtag .thumbnail {
+  border-radius: 0;
+  border-right: 2px solid $bh-ink;
+}
+.listfeaturedtag .wrapthumbnail,
+.maxthumb { overflow: hidden; }
+
+.listfeaturedtag .thumbnail,
+.maxthumb img {
+  transition: transform .6s $bh-ease, filter .6s $bh-ease;
+}
+.maxthumb {
+  border-bottom: 2px solid $bh-ink;
+  background: $bh-ink;
+}
+.listfeaturedtag:hover .thumbnail,
+.listrecent .card:hover .maxthumb img {
+  transform: scale(1.04);
+}
+
+.listfeaturedtag h2.card-title,
+.listrecent h2.card-title {
+  font-family: $bh-display;
+  font-weight: 700;
+  font-size: 1.35rem;
+  line-height: 1.15;
+  letter-spacing: -.015em;
+
+  a {
+    background-image: linear-gradient(var(--bh-accent), var(--bh-accent));
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 0 4px;
+    transition: background-size .35s $bh-ease;
+  }
+  a:hover, a:focus { background-size: 100% 4px; text-decoration: none; }
+}
+
+.listfeaturedtag h4.card-text,
+.listrecent h4.card-text {
+  font-family: $bh-text;
+  color: $bh-ink-soft;
+  font-size: .95rem;
+  line-height: 1.5;
+}
+
+.card-footer {
+  border-top: 2px solid $bh-ink !important;
+}
+
+.wrapfooter {
+  font-family: $bh-display;
+  font-size: .75rem;
+  letter-spacing: .04em;
+}
+.author-thumb {
+  border-radius: 50%;
+  border: 2px solid $bh-ink;
+}
+span.post-name a { color: $bh-ink; font-weight: 600; }
+span.post-date, span.post-read { color: $bh-ink-soft; text-transform: uppercase; letter-spacing: .08em; }
+span.post-read-more a { color: $bh-ink; fill: $bh-ink; }
+span.post-read-more a:hover { color: $bh-red; fill: $bh-red; }
+
+// ---- Pagination ----------------------------------------------------------
+.pointerup { display: none; }
+.bottompagination span.navigation {
+  border-top: $bh-rule solid $bh-ink;
+  padding-top: 1.5rem;
+  color: $bh-ink-soft;
+}
+.pagination a,
+.pagination span {
+  display: inline-block;
+  min-width: 2.5rem;
+  margin: 0 .2rem .4rem;
+  padding: .45rem .7rem;
+  font-family: $bh-display;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  border: 2px solid $bh-ink;
+}
+.pagination a {
+  color: $bh-ink;
+  transition: background .2s $bh-ease, color .2s $bh-ease, transform .2s $bh-ease;
+  &:hover { background: $bh-ink; color: $bh-bone; transform: translateY(-2px); }
+}
+.pagination span.ml-1 { background: $bh-red; border-color: $bh-red; color: #fff; }
+.pagination > span:not(.ml-1) { opacity: .45; }
+
+// ---- Post ----------------------------------------------------------------
+.layout-post .flex-first > .mainheading,
+.layout-post .article-post,
+.layout-post .after-post-tags,
+.layout-post .PageNavigation,
+.layout-page .article-post {
+  max-width: 46rem;
+}
+
+.mainheading h1.posttitle {
+  font-family: $bh-display;
+  font-weight: 800;
+  font-size: clamp(2rem, 4.6vw, 3.25rem);
+  line-height: 1.05;
+  letter-spacing: -.03em;
+  margin-bottom: 1rem;
+}
+
+.post-meta-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .35rem;
+  font-family: $bh-display;
+  font-size: .8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  color: $bh-ink-soft;
+  margin-top: 0;
+  padding-bottom: 1.25rem;
+  border-bottom: $bh-rule solid $bh-ink;
+
+  &::before {
+    content: "";
+    width: .8rem; height: .8rem;
+    margin-right: .35rem;
+    background: $bh-red;
+    border-radius: 50%;
+  }
+}
+
+.post-top-meta .author-description { color: $bh-ink-soft; }
+.post-top-meta .col-md-11 a.link-dark,
+.link-dark { color: $bh-ink; font-family: $bh-display; }
+
+.featured-image {
+  width: 46rem;
+  max-width: 100%;
+  border: 2px solid $bh-ink;
+  margin-bottom: 2rem;
+}
+
+// Long-form body
+.article-post {
+  font-family: $bh-text;
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: $bh-ink;
+
+  p, blockquote { margin: 0 0 1.5rem; }
+
+  a {
+    color: $bh-blue;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    background-image: linear-gradient($bh-yellow, $bh-yellow);
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 100% 0;
+    transition: background-size .25s $bh-ease, color .2s $bh-ease;
+
+    &:hover, &:focus {
+      color: $bh-ink;
+      background-size: 100% 100%;
+      text-decoration-color: $bh-ink;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $bh-display;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -.015em;
+    margin: 2.75rem 0 1.1rem;
+  }
+  h2 {
+    font-size: 1.85rem;
+    position: relative;
+    padding-top: 1.1rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 3rem; height: 5px;
+      background: $bh-red;
+    }
+  }
+  h3 {
+    font-size: 1.4rem;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: .6rem; height: .6rem;
+      margin-right: .6rem;
+      vertical-align: middle;
+      background: $bh-blue;
+      position: relative;
+      top: -.12em;
+    }
+  }
+  > :first-child { margin-top: 0; }
+
+  ul, ol { padding-left: 1.4rem; }
+  ul { list-style: none; }
+  ul > li { position: relative; }
+  ul > li::before {
+    content: "";
+    position: absolute;
+    left: -1.2rem;
+    top: .7em;
+    width: .45rem; height: .45rem;
+    background: $bh-ink;
+  }
+  ul ul > li::before { background: transparent; border: 2px solid $bh-ink; }
+  ol > li::marker { font-family: $bh-display; font-weight: 700; color: $bh-red; }
+  li { margin-bottom: .4rem; }
+
+  img {
+    border: 2px solid $bh-ink;
+  }
+
+  hr {
+    border: 0;
+    height: 14px;
+    margin: 3rem 0;
+    background:
+      radial-gradient(circle, $bh-red 6px, transparent 7px) 0 0 / 14px 14px no-repeat,
+      linear-gradient($bh-blue, $bh-blue) 24px 0 / 14px 14px no-repeat,
+      linear-gradient($bh-ink, $bh-ink) 48px 5px / calc(100% - 48px) 4px no-repeat;
+  }
+
+  table {
+    width: 100%;
+    margin: 0 0 1.75rem;
+    border-collapse: collapse;
+    font-size: .95rem;
+    border: 2px solid $bh-ink;
+    display: block;
+    overflow-x: auto;
+  }
+  th {
+    background: $bh-ink;
+    color: $bh-bone;
+    font-family: $bh-display;
+    font-weight: 600;
+    text-align: left;
+  }
+  th, td { padding: .6rem .85rem; border-bottom: 1px solid rgba($bh-ink, .2); }
+  tr:nth-child(even) td { background: rgba($bh-ink, .035); }
+}
+
+blockquote,
+.article-post blockquote {
+  position: relative;
+  padding: 1.1rem 1.4rem 1.1rem 1.6rem;
+  border-left: 0;
+  background: $bh-paper;
+  font-style: normal;
+  color: $bh-ink;
+  box-shadow: inset 6px 0 0 $bh-blue;
+
+  p:last-child { margin-bottom: 0; }
+}
+
+// Inline code
+.article-post :not(pre) > code,
+.article-post :not(pre) > code.highlighter-rouge {
+  font-family: $bh-mono;
+  font-size: .82em;
+  padding: .12em .4em;
+  color: $bh-ink;
+  background: rgba($bh-yellow, .28);
+  border-radius: 0;
+}
+
+// Plain-text blocks (Prism skips these) get an ink panel of their own.
+div.highlighter-rouge pre.highlight {
+  background: $bh-ink !important;
+  color: $bh-bone;
+  padding: 1rem 1.25rem !important;
+  margin: 1.5em 0 !important;
+  font-family: $bh-mono;
+  font-size: .82rem;
+  line-height: 1.6;
+  border: 2px solid $bh-ink !important;
+  box-shadow: 6px 6px 0 0 $bh-yellow;
+
+  code { color: inherit; background: none; padding: 0; font-size: inherit; }
+}
+
+// Code blocks: keep Prism's dark theme, square it off.
+div.highlighter-rouge pre[class*="language-"],
+.article-post pre {
+  border-radius: 0 !important;
+  border: 2px solid $bh-ink !important;
+  box-shadow: 6px 6px 0 0 $bh-blue;
+}
+code[class*="language-"],
+pre[class*="language-"] {
+  font-size: .82rem;
+}
+
+// Mermaid diagrams sit on paper.
+.article-post .mermaid {
+  background: $bh-paper;
+  border: 2px solid $bh-ink;
+  padding: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+// Tags
+ul.tags { margin: 2.5rem 0 2.5rem; }
+ul.tags li { margin: 0 .35rem .5rem 0; }
+ul.tags li a {
+  display: inline-block;
+  padding: .35rem .75rem;
+  border: 2px solid $bh-ink;
+  border-radius: 0;
+  background: transparent;
+  color: $bh-ink;
+  font-family: $bh-display;
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  transition: background .2s $bh-ease, color .2s $bh-ease;
+
+  &:hover { background: $bh-yellow; color: $bh-ink; }
+}
+
+// Prev / next
+.PageNavigation {
+  margin: 0 0 3rem;
+  gap: 1rem;
+  flex-wrap: nowrap;
+
+  a {
+    flex: 1 1 0;
+    max-width: none;
+    padding: 1rem 1.2rem;
+    border: 2px solid $bh-ink;
+    color: $bh-ink;
+    font-family: $bh-display;
+    font-weight: 600;
+    line-height: 1.3;
+    transition: transform .3s $bh-ease, box-shadow .3s $bh-ease;
+
+    &:hover {
+      transform: translate(-4px, -4px);
+      box-shadow: 8px 8px 0 0 $bh-red;
+      color: $bh-ink;
+    }
+  }
+  a.next:hover { box-shadow: 8px 8px 0 0 $bh-blue; }
+}
+
+// Share rail
+.share {
+  font-family: $bh-display;
+  p {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: $bh-ink;
+  }
+  a { color: $bh-ink; }
+  ul li a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    border: 2px solid $bh-ink;
+    transition: background .2s $bh-ease, color .2s $bh-ease, transform .2s $bh-ease;
+  }
+  ul li:nth-child(1) a:hover { background: $bh-blue;   color: #fff; }
+  ul li:nth-child(2) a:hover { background: $bh-red;    color: #fff; }
+  ul li:nth-child(3) a:hover { background: $bh-yellow; color: $bh-ink; }
+  ul li a:hover { transform: translateY(-2px); }
+  .sep { background: $bh-ink; height: 3px; }
+  ul li a.small { width: auto; height: auto; border: 0; }
+}
+
+// Reading progress bar (CSS scroll-driven; no JS, ignored where unsupported)
+@supports (animation-timeline: scroll()) {
+  .layout-post .mediumnavigation::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0;
+    bottom: -$bh-rule;
+    height: $bh-rule;
+    background: $bh-red;
+    transform-origin: left center;
+    animation: bh-progress linear both;
+    animation-timeline: scroll(root);
+  }
+}
+
+// ---- Footer --------------------------------------------------------------
+.footer {
+  position: relative;
+  margin: 4rem 0 0;
+  padding: 2.25rem 0 2.5rem;
+  background: $bh-ink;
+  color: $bh-bone;
+  border-top: 0 !important;
+  font-family: $bh-display;
+  font-size: .85rem;
+  letter-spacing: .06em;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 8px;
+    background: linear-gradient(90deg,
+      $bh-red 0 33.33%, $bh-yellow 33.33% 66.66%, $bh-blue 66.66% 100%);
+  }
+  a { color: $bh-yellow; font-weight: 600; }
+  a:hover { color: #fff; }
+}
+
+// ---- Scroll reveal (only when JS has opted elements in) ------------------
+.bh-reveal-on .bh-reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .7s $bh-ease, transform .7s $bh-ease;
+  transition-delay: var(--bh-delay);
+}
+.bh-reveal-on .bh-reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+// ---- Keyframes -----------------------------------------------------------
+@keyframes bh-rise {
+  from { opacity: 0; transform: translateY(.35em); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes bh-pop {
+  0%   { opacity: 0; transform: scale(.4) rotate(-20deg); }
+  70%  { opacity: 1; transform: scale(1.06) rotate(2deg); }
+  100% { opacity: 1; transform: none; }
+}
+@keyframes bh-wipe {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+@keyframes bh-progress {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+// ---- Responsive ----------------------------------------------------------
+@media (max-width: 991.98px) {
+  .mediumnavigation .navbar-collapse {
+    border-top: 2px solid $bh-ink;
+    margin-top: .5rem;
+  }
+  .mediumnavigation .nav-link::after { left: 0; right: auto; width: 2rem; }
+}
+
+@media (max-width: 767.98px) {
+  .site-content > .container > .mainheading {
+    grid-template-columns: 1fr 96px;
+    column-gap: 1rem;
+    padding-top: .5rem;
+
+    .lead { font-size: 1.05rem; }
+    .bh-motif { width: 96px; align-self: start; }
+  }
+  .layout-post .site-content > .container > .mainheading .bh-motif,
+  .layout-page .site-content > .container > .mainheading .bh-motif { width: 64px; align-self: center; }
+
+  .article-post { font-size: 1.075rem; }
+  .article-post h2 { font-size: 1.55rem; }
+
+  .listfeaturedtag .thumbnail { border-right: 0; border-bottom: 2px solid $bh-ink; }
+  .listfeaturedtag .wrapfooter { margin-top: 0; }
+
+  .PageNavigation { flex-direction: column; flex-wrap: wrap; }
+  .PageNavigation a.next { text-align: left !important; }
+
+  .share { margin-bottom: 1.5rem; }
+}
+
+// ---- Reduced motion ------------------------------------------------------
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    transition-delay: 0ms !important;
+  }
+  .listfeaturedtag:hover, .listfeaturedtag:focus-within,
+  .listrecent .card:hover, .listrecent .card:focus-within,
+  .PageNavigation a:hover { transform: none; }
+  .layout-post .mediumnavigation::after { animation: none; display: none; }
+}

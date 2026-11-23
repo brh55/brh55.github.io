@@ -22,9 +22,11 @@
     
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     
-<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Fira+Code:wght@400;700&family=Jost:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#f3eee4">
     
 <link href="{{ site.baseurl }}/assets/css/screen.css" rel="stylesheet">
 
@@ -53,7 +55,7 @@
     
 <!-- Begin Menu Navigation
 ================================================== -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top mediumnavigation nav-down">
     
     <div class="container pr-0">    
     
@@ -82,7 +84,7 @@
                 <a class="nav-link" href="{{ site.baseurl }}/index.html">Blog</a>
                 </li>
                 
-                {% if page.url == "/about.html" %}
+                {% if page.url == "/about.html" or page.url == "/about/" %}
                 <li class="nav-item active">
                 {% else %}
                 <li class="nav-item">
@@ -120,6 +122,7 @@
     <p class="lead">
          {{ site.description }}
     </p>
+    {% include bauhaus-motif.html %}
 </div>
 
     
@@ -209,6 +212,8 @@
 <script src="{{ site.baseurl }}/assets/js/ie10-viewport-bug-workaround.js"></script>
     
 <script src="{{ site.baseurl }}/assets/js/mediumish.js"></script>
+
+<script src="{{ site.baseurl }}/assets/js/bauhaus.js" defer></script>
     
 <script id="dsq-count-scr" src="//{{site.disqus}}.disqus.com/count.js"></script>
 
@@ -242,7 +247,7 @@
 <!-- Mermaid.js for dynamic diagrams -->
 <script type="module">
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
-  mermaid.initialize({ startOnLoad: true, theme: 'default' });
+  mermaid.initialize({ startOnLoad: true, theme: 'base', themeVariables: { fontFamily: 'DM Sans, sans-serif', primaryColor: '#fbf8f2', primaryBorderColor: '#141414', primaryTextColor: '#141414', lineColor: '#141414', secondaryColor: '#f4b400', tertiaryColor: '#f3eee4' } });
 </script>
 </body>
 </html>
